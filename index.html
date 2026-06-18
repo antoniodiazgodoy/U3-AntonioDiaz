@@ -3,53 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Ejemplo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Enlace Fatal</title>
+    <meta name="description" content="Formar enlaces y destruye estrategias!">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
+<body class="body">
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Esto es el título principal</h1>
-            <p>
-                Esto es una página web de ejemplo utilizando HTML, CSS y JavaScript.
-            </p>
-            <a href="#galeria" class="btn">Ver Galería</a>
+  <section class="container-fluid mt-4 centro">
+            <div class="proctagono"></div>
+            <div class="sdoctagono"></div>
+            <div class="tcoctagono"></div>
+        <div class="octagonocentro centro"> 
+            <div class="logo"></div>
+            <div class="centrotext">
+                <p class="plogo">Forma <span style="color: #AED082;">enlaces</span>.<br>Destruye <span style="color: #EF7A70;">estrategias</span>.</p>
+            </div>
         </div>
-    </section>
+  </section>
 
-    <!-- PARALLAX -->
-    <section class="parallax">
-        <div class="overlay">
-            <h2>Esto es un título 2</h2>
+  <section class="container-fluid mt-5 pt-5 centro">
+        <div class="octagonocentro centro" style="background-color: #AED082;">
+            <div class="octagonofondo pt-5">
+                <div class="text-center mt-5 plogo">
+                    <h1 class="pb-5">Lorem, ipsum.</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, iusto.</p>
+                </div>
+            </div>
         </div>
-    </section>
+  </section>
 
-
-    <!-- GALERÍA -->
-    <section id="galeria" class="galeria">
-        <h2>Galería</h2>
-
-        <div class="grid">
-            <img src="assets/catapultazo.jpg" alt="">
-            <img src="assets/conectando.jpg" alt="">
-            <img src="assets/cuadriculando.png" alt="">
-            <img src="assets/daleforma.png" alt="">
-            <img src="assets/enlace.png" alt="">
-            <img src="assets/enrutate.png" alt="">
-            <img src="assets/polkup.png" alt="">
-            <img src="assets/zona.png" alt="">
+  <section class="container-fluid centrodos pt-3 mt-5 ">
+      <div class="centro mb-3 plogo titulo">
+        <h2 class="mx-3 text-end">Acerca de Enlace Fatal</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sunt rem odio!</p>
+      </div>
+      <div class="gallery-carousel carrusel reveal visible" aria-label="Galería de fotos del juego">
+        <div class="gallery-track">
+          <div class="gallery-slide octagono next">
+            <img src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt="Foto del juego PolkUp 1">
+          </div>
+          <div class="gallery-slide octagono hidden">
+            <img src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt="Foto del juego PolkUp 2">
+          </div>
+          <div class="gallery-slide octagono prev">
+            <img src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt="Foto del juego PolkUp 3">
+          </div>
+          <div class="gallery-slide octagono active">
+            <img src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt="Foto del juego PolkUp 4">
+          </div>
         </div>
-    </section>
+        <div class="gallery-controls pt-5 mt-5">
+            <button type="button" class="gallery-arrow octagono gallery-arrow--prev" aria-label="Imagen anterior">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 L6 10 L12 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+            <div class="gallery-dots" role="tablist" aria-label="Seleccionar imagen">
+              <button type="button" class="gallery-dot octagono" role="tab" aria-selected="false" aria-label="Imagen 1"></button>
+              <button type="button" class="gallery-dot octagono" role="tab" aria-selected="false" aria-label="Imagen 2"></button>
+              <button type="button" class="gallery-dot octagono" role="tab" aria-selected="false" aria-label="Imagen 3"></button>
+              <button type="button" class="gallery-dot octagono active" role="tab" aria-selected="true" aria-label="Imagen 4"></button>
+            </div>
+            <button type="button" class="gallery-arrow octagono gallery-arrow--next" aria-label="Imagen siguiente">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4 L14 10 L8 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+        </div>
+      </div>
+  </section>
 
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox">
-        <span class="cerrar">&times;</span>
-        <img id="imagen-ampliada" src="" alt="">
+  <section class="container-fluid centrodos mb-2 mt-3">
+      <div class="centro plogo titulo">
+        <h2 class="mx-3 text-end">Componentes del juego</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sunt rem odio!</p>
+      </div>
+      <div class="caja mt-1">
+        <div id="clicc" class="octagono tn mx-1"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <img class="octagono ftn" id="clic" src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt="">
+        </div>
+        <div id="clicc" class="octagono tn mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  ><img class="octagono ftn" id="clic" src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt=""></div>
+        <div id="clicc" class="octagono tn mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="octagono ftn" id="clic" src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt=""></div>
+        <div id="clicc" class="octagono tn mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="octagono ftn" id="clic" src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt=""></div>
+        <div id="clicc" class="octagono tn mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="octagono ftn" id="clic" src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt=""></div>
+        <div id="clicc" class="octagono tn mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="octagono ftn" id="clic" src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt=""></div>
+        <div id="clicc" class="octagono tn mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="octagono ftn" id="clic" src="img/lifestyle-crossroads-illustration-of-the-city-block-with-people-free-vector.jpg" alt=""></div>
+        <div class="octagono tns left"></div>
+        <div class="octagono tns"></div>
+        <div class="octagono tns right"></div>
+      </div>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content octagono">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="container-fluid centrodos">
+    <div class="centro plogo titulo">
+      <h2 class="mx-3 text-end">Como armar una partida</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sunt rem odio!</p>
     </div>
+    <div class="container-md mt-5 d-grid gap-3">
+      <div class="plogo titulo-h3 ms-5">
+        <h3 class="ms-4">Lorem, ipsum.</h3>
+      </div>
+      <div class="plogo ms-5 p-p ">
+        <p class="ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptatum! Libero vero eligendi molestias voluptates? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, velit!</p>
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
 
+<script src="script.js"></script>
+<script>
+  const myModal = document.getElementById('myModal')
+  const myInput = document.getElementById('myInput')
+
+  myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
