@@ -1,0 +1,766 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.turret-road {
+  font-family: "Turret Road", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.pb-6{
+  padding-bottom: 7rem;
+}
+.turret-road-extrabold {
+  font-family: "Turret Road", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.turret-road-medium {
+  font-family: "Turret Road", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.turret-road-bold {
+  font-family: "Turret Road", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.withe-section{
+  background-color: #fff;
+}
+.body{
+    background-color: #000;
+    font-family:'Poppins',sans-serif;
+}
+
+/* componentes compartidos */
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centrotext{
+    top: 67%;
+    text-align: center;
+    position: absolute;
+}
+.plogo{
+    color: #fff;
+}
+h1{
+  color: #C1A3CD !important;
+}
+.logo-chikito{
+  width: 45px;
+  height: 45px;
+}
+.azul{
+  color: #0095C8 !important;
+}
+.azul-numero{
+  color: #032533;
+}
+.rojo{
+  color: #EF7A70 !important;
+}
+.verde{
+  color: #AED082 !important;
+}
+.verde-numero{
+  color: #2b3420;
+}
+.morado{
+  color: #C1A3CD !important;
+}
+.morado-numero{
+  color: #302933;
+}
+.n-left{
+  left: 3%;
+}
+.n-right{
+  right: 3%;
+}
+
+.gris{
+  color: #bfbfbf;
+}
+.fs-7{
+  font-size: 3.4rem !important;
+}
+h2{
+    font-size: 2.5rem !important;
+}
+.mt-6{
+  margin-top: 12rem !important;
+}
+.up{
+    width: 430px;
+    height: 70px;
+}
+.mt-7{
+  margin-top: 6rem !important;
+}
+.pt-6{
+  padding-top: 5rem !important;
+}
+.rotar{
+  width: 44px;
+  height: 40px;
+}
+.dos-octagonos{
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+.text-end{
+  width: 300px;
+}
+.centrodos{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.octagono{
+    aspect-ratio: 2;
+    --o:calc(50%*tan(-22.5deg));
+    clip-path: polygon(
+    var(--o) 50%,
+    50% var(--o),
+    calc(100% - var(--o)) 50%,
+    50% calc(100% - var(--o))
+    );
+}
+
+/* -----------logo!!! --------------*/
+.logo{
+    height: 485px; 
+    width: 485px;
+}
+.a-o{
+  --o:calc(42%*tan(-22.5deg)) !important;
+}
+.octagonologo{
+    width: 490px;
+    height: 490px;
+    background-color: #AED082;
+}
+/* octagono del logo de color rojo----------*/
+.proctagono{
+    width: 154px;
+    height: 154px;
+    background: #ef7a70c9;
+    position: absolute;
+    left: 12%;
+    top: 48%;
+}
+/* octagono del logo de color verde---------*/
+.sdoctagono{
+    width: 140px;
+    height: 140px;
+    background: #aed082d1;
+    position: absolute;
+    left: 39%;
+    top: 12%;
+}
+/* octagono del logo de color azul---------*/
+.tcoctagono{
+    width: 80px;
+    height: 80px;
+    background: #0095c8b0;
+    position: absolute;
+    left: 43%;
+    top: 64%;
+}
+
+/* -----------octagono k es enlace fatal?-------------- */
+.octagonocentro{
+    width: 480px;
+    height: 480px;
+    background-color: #AED082;
+}
+.octagonofondo{
+    width: 475px;
+    height: 475px;
+  background: #1a1f13;
+}
+.parra{
+  width: 400px;
+}
+.octagono-verde-pequeno{
+  width: 15px;
+  height: 15px;
+  background-color: #AED082;
+}
+/*------indice-------*/
+.indice{
+  background-color: #252525cd;
+  color: #fff;
+}
+.caja-de-numeros{
+  width: 250px;
+  font-size: 14px;
+}
+.caja-de-numeros a{
+  border-right: 1px #fff;
+}
+.caja-de-numeros a:hover{
+  color: #fff;
+}
+
+/*-----7 octagonos piezas del juego------*/
+.caja{
+    display: inline-flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 400px;
+}
+
+.tn{
+    width: 180px;
+    height: 180px;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: background 0.0s, transform 0.15s, color 0.5s;
+    cursor: pointer;
+}
+
+.ftn{
+    width: 80px;
+    height: 80px;
+}
+.ftn-es{
+  width: 50px;
+  height: 100px;
+  transform: rotate(30deg);
+}
+.ftn-espe{
+  height: 130px;
+  width: 50px;
+}
+.ftn-especial{
+  width: 55px;
+  height: 130px;
+}
+.tn:hover {
+  transform: scale(1.3); 
+  z-index: 1;
+}
+.tns{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 42%;
+    background-color: #EF7A70;
+}
+.left{
+    left: 26%;
+    background-color: #EF7A70 !important;
+}
+.right{
+    right: 26%;
+    background-color: #EF7A70 !important;
+}
+.numero{
+  color: #3c1e1c;
+  font-size: 150px;
+  position: absolute;
+}
+
+
+.p{
+  color: #EF7A70;
+  margin-bottom: 0 !important;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 450px !important;
+    color: #000 ;
+    pointer-events: auto;
+    background-clip: none !important;
+    border: none !important;
+    border-radius: none !important;
+    outline: 0;
+    align-items: center !important;
+    background-color: #fff !important;
+}
+.modal-header{
+  border: none !important;
+}
+.modal-footer{
+  border: none !important;
+}
+.img-modal{
+  width: 200px;
+  height: 150px;
+}
+.modal-body{
+  width: 400px;
+}
+
+/*--------arma y juega------*/
+
+.como-armar{
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.15s, color 0.5s;
+  font-size: 12px;
+}
+
+.img-armar{
+  width: 90px;
+  height: 75px;
+}
+.tablero{
+  width: 180px;
+}
+.pequeno{
+  background-color: #0095C8;  
+  width: 50px !important;
+  height: 50px;
+  position: absolute;
+  left: 53.8%;
+  margin-top: 180px !important;
+  padding: 0 !important;
+}
+.mas-pequeno{
+    background-color: #2f2e2e;
+    height: 45px;
+    width: 45px;
+}
+.diminuto{
+      background-color: #0095C8;
+    height: 15px;
+    width: 15px;
+}
+.segundo-pequeno{
+  right: 19.5% !important;
+    background-color: #0095C8;  
+  width: 50px !important;
+  height: 50px;
+  position: absolute;
+  margin-top: 180px !important;
+  padding: 0 !important;
+}
+
+/*-----------carrusel infinito-------------*/
+.prueba{
+  display: flex;
+  animation: desplazamiento 20s linear infinite;
+}
+
+.prueba img {
+  width: 260px;
+  height: 260px;
+  margin: 0 20px;
+}
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/*------en tu turno tienes que elegir--------*/
+.turno{
+    height: 130px;
+    width: 130px;
+    background-color: #fff;
+}
+.fs-8{
+  font-size: 15px;
+}
+.texto-turno{
+  width: 288px;
+}
+.barra-azul{
+  background-color: #0095C8;
+}
+.img-turno{
+    width: 60px;
+    height: 90px;
+    margin-left: 26px;
+}
+.octagono-pequeño{
+  width: 40px;
+  height: 40px;
+  background-color: #0096c89b;
+  left: 41.5%;
+    margin-bottom: 92px;
+}
+.octagono-pequeño-b{
+  width: 40px;
+  height: 40px;
+  background-color: #0096c89b;
+  right: 2%;
+    margin-bottom: 108px;
+}
+
+/*-----listado de recuerda lo siguiuente----*/
+ul li {
+  background-image: url('nuevas-img/Recurso-2.svg');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 20px 20px; /* Aquí cambias el ancho y alto (ancho alto) */
+  padding-left: 30px !important; /* Separa el texto de la imagen de fondo */
+}
+ul {
+  list-style-type: none;
+}
+li{
+  width: 400px;
+  height: auto;
+font-size: 15px;
+}
+
+
+
+/*------como llegar a la victoria-----*/
+.fondo-img{
+  width: 330px;
+  height: 330px;
+  background-color: #000;
+}
+.fondo-img:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.img-end{
+      height: 100px ;
+    width: 160px ;
+}
+.text-vic{
+  width: 300px;
+}
+
+.octagono-de-atras{  
+height: 250px;
+position: absolute;
+top: 12%;
+}
+.octagono-blanco{
+  background-color: #fff;
+  width: 85px;
+  height: 85px;
+}
+.sin-p-m{
+  margin: 0% !important;
+  padding: 0 !important;
+}
+.nose{
+  width: 310px;
+  margin-bottom: 1% !important;
+}
+.img-conquista{
+  width: 60px;
+}
+.one{
+  width: 300px;
+  height: 300px;
+  background-color: #C1A3CD;
+  left: 22%;
+  top: 12%;
+}
+.one-one{
+  width: 290px;
+  height: 290px;
+  background-color: #fff;
+
+}
+.two{
+    width: 300px;
+  height: 300px;
+  background-color: #C1A3CD;
+  right: 18%;
+  top: 12%;
+}
+.two-two{
+  width: 290px;
+  height: 290px;
+  background-color: #fff;
+ 
+}
+.three{
+  background-color: #0095C8;
+  width: 150px;
+  height: 150px;
+    top: 43%;
+    right: 26.2%;
+}
+.three-three{
+    background-color: #2f2e2e;
+  width: 140px;
+  height: 140px;
+  z-index: -1;
+}
+
+
+/*--------pix------*/
+
+.jinx {
+  width: 100%;
+  height: 350px;
+}
+.qr{
+  height: 250px;
+  width: 100%;
+}
+.qr img{
+  width: 180px;
+  height: 180px;
+}
+/*------entrar-----*/
+
+.primer-octagono{
+  height: 520px;
+  width: 560px !important;
+  background-color: #000;
+  padding: 0 !important;
+}
+.fondo-primer-octagono{
+    height: 505px;
+    width: 550px !important;
+    background-color: #fff;
+}
+.img-experiencia{
+    width: 40px;
+    height: 25px;
+}
+.vive{
+  width: 360px;
+}
+.octagono-chikito{
+  width: 20px;
+  height: 20px; 
+  background-color: #000;
+}
+.segundo-octagono{
+    height: 360px;
+    width: 400px !important;
+    background-color: #000;
+    position: absolute;
+    margin-top: 260px !important;
+    padding: 0 !important;
+}
+.fondo-segundo-octagono{
+    height: 350px;
+    width: 390px !important;
+    background-color: #fff;
+}
+.tercer-octagono{
+    height: 157px;
+    width: 170px !important;
+    background-color: #000;
+    position: absolute;
+    margin-top: 600px !important;
+    padding: 0 !important;
+}
+.tercer-octagono a{
+  text-decoration: none;
+}
+.fondo-tercer-octagono{
+    height: 147px;
+    width: 160px !important;
+    background-color: #fff;
+    cursor: pointer;
+    color: #000;
+}
+.tercer-octagono:hover {
+  background-color: #000 !important;
+  transition: 0.1s;
+}
+.primer-octagono:hover {
+  background-color: #000 !important;
+  transition: 0.3s;
+}
+.fondo-tercer-octagono:hover {
+  background-color: #000 !important;
+  color: #fff;
+  transition: 0.1s;
+}
+.fondo-segundo-octagono:hover {
+  background-color: #000 !important;
+  color: #fff;
+  transition: 0.2s;
+}
+.fondo-primer-octagono:hover {
+  background-color: #000 !important;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.texto-final{
+  width: 730px;
+}
+
+
+/*-----fooooteeeeeer-----*/
+footer{
+  background-color: #000;
+}
+
+.img-footer{
+    width: 145px;
+    height: 68px;
+}
+.img-footer-dos{
+    width: 200px;
+    height: 60px;
+}
+
+
+
+
+:root{
+--coral:#EF7A70;
+--blue:#0095C8;
+--green:#AED082;
+--purple:#C1A3CD;
+
+}
+
+/*-----carrusel------*/
+
+.rectangulo{
+  height: 450px;
+  width: 1000px;
+}
+
+
+/* --- SECCIÓN 4: GALERÍA (Fondo blanco) --- */
+#gallery { padding: 6rem 2rem }
+#gallery .inner {max-width: 920px;margin: 0 auto;}
+.gallery-carousel { margin-top: 3rem; }
+
+.gallery-track {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  
+}
+
+
+.gallery-slide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0.5;
+  z-index: 1;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  background-color: #2f2e2e;
+  border-radius: 10px;
+}
+
+
+.gallery-slide.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 3;
+  cursor: default;
+}
+
+.gallery-slide.prev {
+  transform: translate(calc(-50% - 20%), -50%) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.gallery-slide.next {
+  transform: translate(calc(-50% + 20%), -50%) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.gallery-slide.hidden {
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid #0095C8;
+  background: #0095C8;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.15s, border-color 0.2s, color 0.2s;
+}
+
+.gallery-arrow:hover {
+
+  transform: scale(1.2);
+}
+
+.gallery-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.gallery-dot {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.gallery-dot.active {
+  background: #0095C8;
+  transform: scale(1.25);
+}
+
+.gallery-dot:hover:not(.active) {
+  background: #0095C8;
+}
+
+
+
+/*------intro de carga: octagonos, logo y texto apareciendo de a poco-------*/
+html.intro-lock,
+html.intro-lock body{
+  overflow: hidden !important;
+  height: 100%;
+}
+
+.intro-item{
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.intro-item.intro-show{
+  opacity: 1;
+  transform: translateY(0);
+}
